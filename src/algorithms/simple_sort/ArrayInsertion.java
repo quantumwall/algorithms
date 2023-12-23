@@ -19,5 +19,15 @@ public class ArrayInsertion extends Array{
 	    arr[inn] = temp;
 	}
     }
+    
+    public double median() {
+	sort();
+	int middleIndex = size / 2;
+	if (size % 2 == 0) {
+	    int preMiddleIndex = middleIndex - 1;
+	    return (arr[middleIndex] + arr[preMiddleIndex]) / 2.0;
+	}
+	return arr[middleIndex];
+    }
 
 }
